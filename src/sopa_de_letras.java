@@ -10,19 +10,31 @@ public class sopa_de_letras {
 	/*AQUI ESTOY GENERANDO UNA MATRIZ DE 15X15*/
 	public static char[][] Soup = new char [15][15]; 
 	
-	/*
-	 METODO PARA PEDIR LAS PALABRAS,TRANSFORMARLAS Y ALMACENARLAS EN UN VECTOR.
-	 ENTRADAS:ninguna SALIDAS:ninguna
-	*/
+	/*METODO PARA PEDIR LAS PALABRAS,TRANSFORMARLAS Y ALMACENARLAS EN UN VECTOR.
+	 *ENTRADAS:ninguna SALIDAS:ninguna 
+	 */
 	public static void palabras() {
 		String palabra;
+		int contador=1;
 		Scanner teclado = new Scanner(System.in);
+		
 		do {
-				System.out.println("Introduce 10 palabras por favor");
-				palabra=teclado.next();
-				palabra=palabra.toUpperCase(); ahora el tema de la longuitud
-				char vector []=palabra.toCharArray();//vector		
-		}while(palabra.length()!=10);	
+				do{
+					System.out.println("Introduce 10 palabras por favor");
+					palabra=teclado.next();
+					char vector []=palabra.toCharArray();//vector
+					palabra=palabra.toUpperCase();
+				}while(palabra.length()<3||palabra.length()>15);
+				
+			System.out.println("llevas: "+contador+" palabras");
+			contador++;
+		}while(contador!=11);	
+	}
+	/*METODO PARA COLOCAR POR TAMAÑO LAS PALABRAS QUE HA INTRODUCIDO EL USUARIO.
+	 * ENTRADAS:ninguna SALIDAS:ninguna
+	 */
+	public static void colocar_palabras() {
+		
 	}
 	/*METODO PARA GENERAR LA SOPA DE LETRAS.
 	 * ENTRADAS:ninguna SALIDAS:ninguna
